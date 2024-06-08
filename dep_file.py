@@ -1,4 +1,5 @@
 import streamlit as st
+import darts
 from darts.models import ExponentialSmoothing
 
 st.write('deploying_1st_model')
