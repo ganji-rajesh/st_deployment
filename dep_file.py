@@ -13,6 +13,6 @@ with st.spinner('loading model'):
 
 st.write('prediction')
 with st.spinner('predicting'):
-    pred = model.predict(12)
+    pred = model.predict(12).pd_dataframe()
     st.write(pred)
 
