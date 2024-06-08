@@ -1,6 +1,6 @@
 import streamlit as st
 import darts
-from darts.models import ExponentialSmoothing
+from darts.models.forecasting.exponential_smoothing import ExponentialSmoothing
 
 st.write('deploying_1st_model')
 
