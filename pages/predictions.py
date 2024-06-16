@@ -15,7 +15,7 @@ def load_model():
     return model
 @st.cache_data
 def loading_prep_data():
-    p_data = pd.read_excel('/workspaces/st_deployment/assets/prep_data_final.xlsx')
+    p_data = pd.read_excel('assets/prep_data_final.xlsx')
     return p_data
 
 past_data = loading_prep_data()
