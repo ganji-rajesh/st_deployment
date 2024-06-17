@@ -24,12 +24,12 @@ past_data = loading_prep_data()
 with st.spinner('loading model'):
     model = load_model()
 
-
+# Add a slider for selecting prediction period
+num_periods = st.slider('Select number of months for prediction, starting from June 2024 ', 1, 12)
 
 predictions, chart = st.columns([0.4,0.6])
 
-# Add a slider for selecting prediction period
-num_periods = st.slider('Select number of months for prediction, starting from June 2024 ', 1, 12)
+
 with predictions:
     with st.spinner('predicting'):
             pred = model.predict(num_periods).pd_dataframe()
@@ -39,7 +39,7 @@ with predictions:
 trace_past = go.Scatter(x=past_data['Period'], y=past_data['Units'], mode='lines', name='Past Data')
 trace_pred = go.Scatter(x=pred.index, y=pred['Units'], mode='lines', name='Predictions')
 # Create a figure
-fig = make_subplots(])
+fig = make_subplots()
 
 # Add traces
 fig.add_trace(trace_past, secondary_y=False)

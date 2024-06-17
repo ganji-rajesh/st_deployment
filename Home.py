@@ -24,8 +24,8 @@ st.subheader(body='Objective: predict electricity demand')
 st.write('Data source: Monthly commercial electricity consumption data was collected from January 2019 to May 2024 at each level of TGSPDCL from data.telangana.gov.in' )
 st.write('I have preprocessed and aggregated this at TGSNPDCL level for each month from Jan 2019 to May 2024.')
 @st.cache_data
-def pre_data()
-    prep_data = st.dataframe('assets/prep_data_final.xlsx')
+def pre_data():
+    prep_data = pd.read_excel('assets/prep_data_final.xlsx')
     return prep_data
 prep_data = pre_data()
 st.dataframe(prep_data)
