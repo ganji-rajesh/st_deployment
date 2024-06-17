@@ -55,4 +55,4 @@ with chart:
     st.plotly_chart(fig)
 
 st.write('want to know how i built this?...') 
-st.markdown('[checkout github repo](http://www.example.com)')
+st.markdown('[checkout github repo](https://github.com/ganji-rajesh/portfolio/tree/main/projects/tgsnpdcl)')
